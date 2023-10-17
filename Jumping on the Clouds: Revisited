@@ -1,0 +1,9 @@
+def jumpingOnClouds(c, k):
+    en = 100
+    n = len(c)
+    cur = k % n
+    en -= 1 + c[cur] * 2
+    while cur != 0:
+        cur = (cur + k) % n
+        en -= 1 + c[cur] * 2
+    return en
