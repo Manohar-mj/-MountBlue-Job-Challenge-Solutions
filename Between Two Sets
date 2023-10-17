@@ -1,0 +1,29 @@
+
+import math
+from functools import reduce
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'getTotalX' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. INTEGER_ARRAY a
+#  2. INTEGER_ARRAY b
+#
+def gcd(a, b):
+    while b:
+        a,b = b,a % b
+    return a
+
+def lcm(a, b):
+    return a*b// gcd(a, b)
+
+def getTotalX(a, b):
+    lcm_a = reduce(lcm, a)
+    gcd_b = reduce(gcd, b)
+    count = sum(1 for x in range(lcm_a, gcd_b + 1, lcm_a) if gcd_b % x == 0)
+    return count
