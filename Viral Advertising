@@ -1,0 +1,10 @@
+def viralAdvertising(n):
+    # Write your code here
+    share=5
+    like=share//2
+    cum=like
+    for _ in range(2, n + 1):
+        share=like* 3
+        like=  share// 2
+        cum+=like
+    return cum
