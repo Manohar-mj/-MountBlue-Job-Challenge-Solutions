@@ -1,0 +1,6 @@
+def birthday(s, d, m):
+    # Write your code here
+    cnt=0
+    for i in range(len(s)-m+2):
+        if sum(s[i:i+m]) ==d: cnt+=1
+    return cnt
