@@ -1,0 +1,4 @@
+def gameOfStones(n):
+    # Write your code here
+    if n % 7 in [0, 1]: return "Second"
+    else: return "First"
