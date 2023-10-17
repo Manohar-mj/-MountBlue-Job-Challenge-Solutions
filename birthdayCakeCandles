@@ -1,0 +1,9 @@
+def birthdayCakeCandles(candles):
+    max_height = max(candles)
+    return candles.count(max_height)
+
+# Sample Input
+candles = [4, 4, 1, 3]
+
+# Function call and printing the result
+print(birthdayCakeCandles(candles))  # Output should be 2
