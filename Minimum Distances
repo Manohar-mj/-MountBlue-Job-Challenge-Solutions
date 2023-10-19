@@ -1,0 +1,10 @@
+def minimumDistances(arr):
+    min_distance = float('inf')
+    indices = {}
+    for i, num in enumerate(arr):
+        if num in indices:
+            min_distance = min(min_distance, i - indices[num])
+        indices[num] = i
+    return min_distance if min_distance != float('inf') else -1
+
+
