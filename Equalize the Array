@@ -1,0 +1,6 @@
+from collections import Counter
+
+def equalizeArray(arr):
+    freq = Counter(arr)
+    max_freq = max(freq.values())
+    return len(arr) - max_freq
