@@ -1,0 +1,7 @@
+def circularArrayRotation(a, k, queries):
+    # Write your code here
+    n=len(a)
+    k=k%n
+    ra=a[-k:]+a[:-k]
+    res=[ra[i] for i in queries]
+    return res
