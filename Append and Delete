@@ -1,0 +1,11 @@
+def appendAndDelete(s, t, k):
+    common_len=0
+    for i in range(min(len(s),len(t))):
+        if s[i]==t[i]:common_len += 1
+        else:
+            break
+    min_operations=len(s)+len(t)-2*common_len
+    if k>=min_operations and (k-min_operations)%2 == 0 or k>=len(s)+len(t):
+        return "Yes"
+    else:
+        return "No"
