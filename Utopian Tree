@@ -1,0 +1,7 @@
+def utopianTree(n):
+    # Write your code here
+    ht = 1
+    for i in range(n):
+        if i%2==0:ht*= 2
+        else:ht+= 1
+    return ht
