@@ -1,0 +1,9 @@
+def hackerrankInString(s):
+    # Write your code here
+    hr="hackerrank"
+    j=0
+    for char in s:
+        if char==hr[j]:
+            j+= 1
+            if j==len(hr):return "YES"
+    return "NO"
