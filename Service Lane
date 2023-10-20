@@ -1,0 +1,8 @@
+def serviceLane(n, cases):
+    # Write your code here
+    res=[]
+    for i in cases:
+        entry, exit = i
+        min_width=min(width[entry:exit+1])
+        res.append(min_width)
+    return res
