@@ -1,0 +1,7 @@
+def alternatingCharacters(s):
+    # Write your code here
+    dlt = 0
+    for i in range(1, len(s)):
+        if s[i] == s[i-1]:
+            dlt += 1
+    return dlt
