@@ -1,0 +1,31 @@
+def beautifulTriplets(d, arr):
+    count = 0
+    for num in arr:
+        if num + d in arr and num + 2 * d in arr:
+            count += 1
+    return count
+
+
+
+
+function beautifulTriplets(d, arr) {
+    let triplets = 0;
+    for (let i = 0; i < arr.length - 2; i++) {
+        for (let j = i + 1; j < arr.length - 1; j++) {
+            if (arr[j] - arr[i] === d) {
+                let foundTrip = false;
+                for (let k = j + 1; k < arr.length; k++) {
+                    if (arr[k] - arr[j] === d) {
+                        triplets++;
+                        foundTrip = true;
+                        break;
+                    }
+                }
+                if (foundTrip) {
+                    break;
+                }
+            }
+        }
+    }
+    return triplets;
+}
