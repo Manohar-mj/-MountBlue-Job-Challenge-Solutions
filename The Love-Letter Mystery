@@ -1,0 +1,10 @@
+def theLoveLetterMystery(s):
+    # Write your code here
+    ops = 0
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        ops += abs(ord(s[left]) - ord(s[right]))
+        left += 1
+        right -= 1
+    return ops
