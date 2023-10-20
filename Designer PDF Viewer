@@ -1,0 +1,7 @@
+def designerPdfViewer(h, word):
+    # Write your code here
+    max_height = 0
+    for char in word:
+        ind=ord(char)-ord('a')
+        max_height=max(max_height,h[ind])
+    return max_height*len(word)
