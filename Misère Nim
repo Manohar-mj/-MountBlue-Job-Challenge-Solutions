@@ -1,0 +1,9 @@
+def misereNim(s):
+    # Write your code here
+    nim_sum=0
+    for i in s:
+        nim_sum^=i
+    if nim_sum==0 and  any(i>1 for i in s):
+        return "Second"
+    else:
+        return "First"
