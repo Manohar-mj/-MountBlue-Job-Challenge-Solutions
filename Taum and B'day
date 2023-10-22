@@ -1,0 +1,7 @@
+
+def taumBday(b, w, bc, wc, z):
+    l=wc+z
+    m=bc+z
+    total_bc=b*min(bc,l)
+    total_wc=w*min(wc,m)
+    return total_bc+total_wc
