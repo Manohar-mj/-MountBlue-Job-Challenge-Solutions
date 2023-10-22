@@ -1,0 +1,13 @@
+def palindromeIndex(s):
+    # Write your code here
+    left,right = 0,len(s) - 1
+
+    while left<right:
+        if s[left]!=s[right]:
+            if s[left+1:right+1] == s[left+1:right+1][::-1]:
+                return left
+            if s[left:right]==s[left:right][::-1]:
+                return right
+        left+=1
+        right-=1
+    return -1
