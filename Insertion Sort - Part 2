@@ -1,0 +1,10 @@
+def insertionSort2(n, arr):
+    # Write your code here
+    for i in range(1,len(arr)):
+        for j in range(i):
+            if arr[i]<arr[j]:
+                value=arr[i]
+                arr.pop(i)
+                arr.insert(j, value)
+                break
+        print(*arr)
