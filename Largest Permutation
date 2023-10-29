@@ -1,0 +1,14 @@
+def largestPermutation(k, arr):
+    # Write your code here
+    n = len(arr)
+    d = {arr[i]: i for i in range(n)}
+    for i in range(n):
+        if k==0:
+            break
+        if arr[i]==n-i:
+            continue
+        j=d[n-i]
+        arr[i], arr[j] =arr[j],arr[i]
+        d[arr[i]],d[arr[j]] =i,j
+        k -= 1
+    return arr
