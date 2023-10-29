@@ -1,0 +1,8 @@
+
+def stones(n, a, b):
+    # Write your code here
+    p=[]
+    a=list(combinations_with_replacement([a,b],n))
+    for _ in a:
+        p.append(sum(_[1:]))
+    return sorted(set(p))
