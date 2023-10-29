@@ -1,0 +1,8 @@
+def makingAnagrams(s1, s2):
+    # Write your code here
+    cnt_s1=Counter(s1)
+    cnt_s2=Counter(s2)
+    tt=0
+    for char in set(s1+s2):
+        tt+= abs(cnt_s1[char]-cnt_s2[char])
+    return tt
