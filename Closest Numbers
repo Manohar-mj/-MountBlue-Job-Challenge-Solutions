@@ -1,0 +1,14 @@
+def closestNumbers(arr):
+    # Write your code here
+    arr.sort()
+    temp = [arr[0], arr[1]]
+    d = abs(arr[0] - arr[1])
+    for i in range(1, len(arr)-1):
+        y, x = arr[i+1], arr[i]
+        f = abs(x - y)
+        if f < d:
+            temp = [x, y]
+            d = f
+        elif f == d:
+            temp.extend([x,y])
+    return temp
