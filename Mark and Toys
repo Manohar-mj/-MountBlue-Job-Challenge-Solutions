@@ -1,0 +1,6 @@
+def maximumToys(prices, k):
+    # Write your code here
+    prices.sort()
+    for i in range(len(prices) + 1):
+        if sum(prices[:i]) > k:
+            return i - 1
