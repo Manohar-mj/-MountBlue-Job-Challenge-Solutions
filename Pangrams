@@ -1,0 +1,3 @@
+alphabet = set('abcdefghijklmnopqrstuvwxyz')
+    if set(s.lower()) >= alphabet:return "pangram"
+    else:return "not pangram"
