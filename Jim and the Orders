@@ -1,0 +1,7 @@
+def jimOrders(orders):
+    # Write your code here
+    dt={}
+    for i, (p,s) in enumerate(orders):
+        dt[i+1]=p+s
+    s=sorted(dt,key=dt.get)
+    return s
