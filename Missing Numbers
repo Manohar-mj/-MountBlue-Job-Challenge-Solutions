@@ -1,0 +1,4 @@
+
+def missingNumbers(arr, brr):
+    # Write your code here
+    return sorted(filter(lambda x: arr.count(x)!=brr.count(x),set(brr)))
