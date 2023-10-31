@@ -1,0 +1,8 @@
+def gemstones(arr):
+    # Write your code here
+    charcterSet = []
+    for s in arr:
+        charcterSet.append(set(s))
+        
+    commonCharacters = set.intersection(*charcterSet)
+    return len(commonCharacters)
