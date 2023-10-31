@@ -7,3 +7,15 @@ def pickingNumbers(a):
         if c > max_count:
             max_count = c
     return max_count
+
+
+
+
+
+def pickingNumbers(a):
+    # Write your code here
+    c =[]
+    nums = set(a)
+    for i in nums:
+        c.append(a.count(i)+a.count(i-1))
+    return max(c) 
