@@ -1,0 +1,8 @@
+
+def sumXor(n):
+    # Write your code here
+    cnt=0
+    while n:
+        cnt+= n%2 == 0
+        n//= 2
+    return (2**cnt)
