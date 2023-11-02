@@ -1,0 +1,12 @@
+def happyLadybugs(b):
+    # Write your code here
+    if b.find('_')==-1:
+        for d in b:
+            if re.findall(d+d,b) == []:break
+        else:return 'YES'
+    else:
+        for d in b:
+            if re.findall(d+'.*'+d,b)==[] and d!='_':break
+        else:
+            return 'YES'
+    return 'NO'
