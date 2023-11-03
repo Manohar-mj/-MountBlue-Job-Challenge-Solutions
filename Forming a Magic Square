@@ -1,0 +1,15 @@
+def formingMagicSquare(s):
+    # Write your code here
+    all_types=[ [[8,1,6],[3,5,7],[4,9,2]], [[6,7,2],[1,5,9],[8,3,4]], 
+                [[2,9,4],[7,5,3],[6,1,8]], [[4,3,8],[9,5,1],[2,7,6]], 
+                [[6,1,8],[7,5,3],[2,9,4]], [[2,7,6],[9,5,1],[4,3,8]], 
+                [[4,9,2],[3,5,7],[8,1,6]], [[8,3,4],[1,5,9],[6,7,2]] ]
+    abs_list=[]
+    for i  in range(len(all_types)):
+        item=all_types[i]
+        item_sum=0
+        for j in range(3):
+            for k in range(3):
+                item_sum+=abs(s[j][k]-item[j][k])
+        abs_list.append(item_sum)
+    return min(abs_list)
